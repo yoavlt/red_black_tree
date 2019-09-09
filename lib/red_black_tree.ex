@@ -419,7 +419,7 @@ defmodule RedBlackTree do
   end
 
   defp promote(%Node{left: left, right: right, depth: depth}) do
-    balance(%Node{
+    do_balance(%Node{
       left |
       depth: depth - 1,
       left: do_balance(promote(left)),
